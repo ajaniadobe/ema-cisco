@@ -154,17 +154,23 @@
   --color-yellow-800: #373100;
   --color-yellow-900: #1e1b00;
 
+  /* cisco brand colors */
+  --color-cisco-blue: #049fd9;
+  --color-cisco-blue-light: #00bceb;
+  --color-cisco-navy: #07182d;
+  --color-cisco-dark: #0d1b2a;
+
   /* named colors */
   --color-light-base: 255 255 255;
   --color-dark-base: 0 0 0;
   --color-light: rgb(255 255 255);
   --color-dark: rgb(0 0 0);
-  --color-text: light-dark(var(--color-dark), var(--color-light));
-  --color-link: light-dark(var(--color-gray-900), var(--color-gray-100));
-  --color-brand: var(--color-purple-500);
-  --color-accent: light-dark(var(--color-magenta-600), var(--color-magenta-500));
+  --color-text: light-dark(var(--color-cisco-navy), var(--color-light));
+  --color-link: light-dark(var(--color-cisco-blue), var(--color-cisco-blue-light));
+  --color-brand: var(--color-cisco-blue);
+  --color-accent: light-dark(var(--color-cisco-blue), var(--color-cisco-blue-light));
   --color-background: light-dark(var(--color-light), var(--color-dark));
-  --color-shaded: light-dark(#f9f9f9, #111);
+  --color-shaded: light-dark(#f5f5f5, #111);
 
   /* fonts */
   --font-family: montserrat, "Trebuchet MS", sans-serif;
@@ -242,51 +248,63 @@ a {
   &.btn {
     display: inline-block;
     line-height: 1;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
-    border: 2px solid;
-    padding: 8px 12px;
+    border: 1px solid transparent;
+    padding: 10px 20px;
+    border-radius: 48px;
     box-sizing: border-box;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
     &.btn-outline {
       background: transparent;
+    }
+
+    &:hover {
+      opacity: 0.85;
     }
   }
 
   &.btn-accent {
-    color: #fff;
-    background: var(--color-accent);
-    border: 2px solid var(--color-accent);
+    color: var(--color-cisco-navy);
+    background: var(--color-light);
+    border-color: var(--color-light);
 
     &.btn-outline {
-      color: var(--color-accent);
+      color: var(--color-light);
+      background: transparent;
+      border-color: var(--color-light);
     }
   }
 
   &.btn-primary {
-    color: var(--color-background);
-    background-color: var(--color-text);
+    color: var(--color-light);
+    background-color: var(--color-cisco-blue);
+    border-color: var(--color-cisco-blue);
 
     &.btn-outline {
-      color: var(--color-text);
+      color: var(--color-cisco-blue);
       background: transparent;
+      border-color: var(--color-cisco-blue);
     }
   }
 
   &.btn-secondary {
-    color: var(--color-background);
-    background-color: var(--color-gray-500);
-    border: 2px solid var(--color-gray-500);
+    color: var(--color-cisco-navy);
+    background-color: var(--color-light);
+    border-color: var(--color-gray-300);
 
     &.btn-outline {
-      color: var(--color-gray-500);
+      color: var(--color-text);
+      background: transparent;
+      border-color: currentcolor;
     }
   }
 
   &.btn-negative {
     color: #fff;
     background-color: var(--color-red-600);
-    border: 2px solid var(--color-red-600);
+    border-color: var(--color-red-600);
 
     &.btn-outline {
       color: var(--color-red-600);
@@ -297,10 +315,37 @@ a {
 /* sections */
 .section {
   display: block;
+  padding: var(--spacing-xxl) 0;
 
   > .default-content {
     max-width: var(--grid-container-width);
     margin: 0 auto;
+  }
+
+  /* dark section style (Cisco dark navy/black backgrounds) */
+  &.dark {
+    background-color: var(--color-cisco-dark);
+    color: var(--color-light);
+
+    a:not(.btn) {
+      color: var(--color-cisco-blue-light);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: var(--color-light);
+    }
+  }
+
+  /* grey section style */
+  &.grey {
+    background-color: var(--color-gray-100);
+    color: var(--color-cisco-navy);
+  }
+
+  /* light section style (explicit white) */
+  &.light {
+    background-color: var(--color-light);
+    color: var(--color-cisco-navy);
   }
 }
 

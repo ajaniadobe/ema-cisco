@@ -1,0 +1,16 @@
+{
+  "status": "success",
+  "url": "https://www.cisco.com/site/us/en/about/why-cisco/index.html",
+  "path": "site/us/en/about/why-cisco/index",
+  "timestamp": "2026-04-15T19:00:25.439Z",
+  "title": "Why Customers Choose Cisco - Cisco",
+  "template": "about-corporate",
+  "blocks": [
+    "columns",
+    "columns",
+    "columns",
+    "columns",
+    "cards",
+    "cards"
+  ]
+}

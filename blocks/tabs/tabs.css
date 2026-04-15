@@ -1,0 +1,43 @@
+.tabs .tabs-list {
+  display: flex;
+  gap: 0.5ch;
+  max-width: 100%;
+  font-size: var(--body-font-size-s);
+  overflow-x: auto;
+}
+
+.tabs .tabs-list button {
+  flex: 0 0 max-content;
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0.75em 1em;
+  background-color: transparent;
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tabs .tabs-list button[aria-selected='true'] {
+  border-bottom-color: var(--color-brand);
+  color: var(--color-brand);
+}
+
+.tabs .tabs-list button:hover {
+  color: var(--color-brand);
+}
+
+.tabs .tabs-panel {
+  padding: 24px 0;
+}
+
+.tabs .tabs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs .tabs-panel img {
+  border-radius: 8px;
+  margin-bottom: 16px;
+}

@@ -158,7 +158,74 @@
         "https://www.cisco.com/site/us/en/solutions/index.html"
       ],
       "description": "Top-level category hub page with promotional banner, hero, accordion category browser, trials promo, 3-up link cards, resources section, and CTA",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["#section-hero .cds-c-text-overlay, #section-hero .cmp-teaser"]
+        },
+        {
+          "name": "accordion",
+          "instances": [".cds-c-verticaltabs__container"]
+        },
+        {
+          "name": "columns",
+          "instances": [".cds-c-media-split"]
+        },
+        {
+          "name": "cards",
+          "instances": [".cds-c-container-divider .cds-l-grid"]
+        }
+      ],
+      "sections": [
+        {
+          "id": "section-promo",
+          "name": "Promo Banner",
+          "selector": "#container-alert, .cds-c-alerts",
+          "style": null,
+          "blocks": [],
+          "defaultContent": []
+        },
+        {
+          "id": "section-hero",
+          "name": "Hero",
+          "selector": "#section-hero",
+          "style": null,
+          "blocks": ["hero"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-browser",
+          "name": "Category Browser",
+          "selector": ".cds-c-verticaltabs",
+          "style": null,
+          "blocks": ["accordion"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-trials",
+          "name": "Trials and Demos",
+          "selector": "[id*='media-split-286'], .cds-c-media-split--in-page.cds-c-media-split__theme--gray",
+          "style": "grey",
+          "blocks": ["columns"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-explore",
+          "name": "Explore More",
+          "selector": "[id*='containerdivider-318']",
+          "style": null,
+          "blocks": ["cards"],
+          "defaultContent": []
+        },
+        {
+          "id": "section-cta",
+          "name": "CTA Section",
+          "selector": "[id*='containerdivider-ecf']",
+          "style": "dark",
+          "blocks": ["cards"],
+          "defaultContent": []
+        }
+      ]
     },
     {
       "name": "product-category",
@@ -167,7 +234,20 @@
         "https://www.cisco.com/site/us/en/products/security/index.html"
       ],
       "description": "Product category page with hero, feature cards and columns, sub-category navigation, related content cards, and CTA section",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["#section-hero .cds-c-text-overlay", "#section-hero .cmp-teaser"]
+        },
+        {
+          "name": "columns",
+          "instances": [".cds-c-media-split"]
+        },
+        {
+          "name": "cards",
+          "instances": [".cds-c-container-divider .cds-l-grid", ".cds-c-container-content .cds-l-grid"]
+        }
+      ]
     },
     {
       "name": "about-corporate",
@@ -175,7 +255,20 @@
         "https://www.cisco.com/site/us/en/about/why-cisco/index.html"
       ],
       "description": "Corporate about page with hero, brand messaging, mixed media content sections, stats and proof points, and resource links",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["#section-hero .cds-c-text-overlay", "#section-hero .cmp-teaser"]
+        },
+        {
+          "name": "columns",
+          "instances": [".cds-c-media-split"]
+        },
+        {
+          "name": "cards",
+          "instances": [".cds-c-container-divider .cds-l-grid", ".cds-c-container-content .cds-l-grid"]
+        }
+      ]
     },
     {
       "name": "case-study",
@@ -184,7 +277,20 @@
         "https://www.cisco.com/site/us/en/about/why-cisco/mclaren-racing.html"
       ],
       "description": "Customer case study page with breadcrumb, hero with industry tag and video CTA, challenge/solution columns, long-form narrative with embedded Brightcove videos, testimonial carousel, recommendation cards, and next-steps CTA",
-      "blocks": []
+      "blocks": [
+        {
+          "name": "hero",
+          "instances": ["#section-hero .cds-c-text-overlay", "#section-hero .cmp-teaser"]
+        },
+        {
+          "name": "columns",
+          "instances": [".cds-c-media-split"]
+        },
+        {
+          "name": "cards",
+          "instances": [".cds-c-container-divider .cds-l-grid", ".cds-c-container-content .cds-l-grid"]
+        }
+      ]
     }
   ]
 }

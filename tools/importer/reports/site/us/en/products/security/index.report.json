@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.cisco.com/site/us/en/products/security/index.html",
+  "path": "site/us/en/products/security/index",
+  "timestamp": "2026-04-15T18:59:38.123Z",
+  "title": "Cisco Security Products and Solutions for Cloud and User Protection - Cisco",
+  "template": "product-category",
+  "blocks": [
+    "hero",
+    "columns",
+    "columns"
+  ]
+}
