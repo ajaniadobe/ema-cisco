@@ -21,9 +21,9 @@ const PAGE_TEMPLATE = {
     'https://www.cisco.com/site/us/en/about/why-cisco/mclaren-racing.html'
   ],
   blocks: [
-    { name: 'hero', instances: ['#section-hero .cds-c-text-overlay', '#section-hero .cmp-teaser'] },
-    { name: 'columns', instances: ['.cds-c-media-split'] },
-    { name: 'cards', instances: ['.cds-c-container-divider .cds-l-grid', '.cds-c-container-content .cds-l-grid'] }
+    { name: 'hero', instances: ['.cds-c-hero .cmp-teaser'] },
+    { name: 'columns', instances: ['.cds-c-detailblock'] },
+    { name: 'cards', instances: ['.cds-c-multi-card', '.cds-c-additional-offering'] }
   ]
 };
 

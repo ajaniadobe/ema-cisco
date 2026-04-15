@@ -2,8 +2,15 @@
   "status": "success",
   "url": "https://www.cisco.com/site/us/en/about/case-studies-customer-stories/nestle.html",
   "path": "site/us/en/about/case-studies-customer-stories/nestle",
-  "timestamp": "2026-04-15T19:01:16.816Z",
+  "timestamp": "2026-04-15T19:43:44.173Z",
   "title": "Nestlé and Cisco SD-WAN Case Study - Cisco",
   "template": "case-study",
-  "blocks": []
+  "blocks": [
+    "hero",
+    "columns",
+    "cards",
+    "cards",
+    "cards",
+    "cards"
+  ]
 }

@@ -280,15 +280,19 @@
       "blocks": [
         {
           "name": "hero",
-          "instances": ["#section-hero .cds-c-text-overlay", "#section-hero .cmp-teaser"]
+          "instances": [".cds-c-hero .cmp-teaser"]
         },
         {
           "name": "columns",
-          "instances": [".cds-c-media-split"]
+          "instances": [".cds-c-detailblock"]
         },
         {
           "name": "cards",
-          "instances": [".cds-c-container-divider .cds-l-grid", ".cds-c-container-content .cds-l-grid"]
+          "instances": [".cds-c-multi-card", ".cds-c-additional-offering"]
+        },
+        {
+          "name": "carousel",
+          "instances": [".cds-c-quote-carousel"]
         }
       ]
     }

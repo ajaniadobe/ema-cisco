@@ -2,8 +2,10 @@
   "status": "success",
   "url": "https://www.cisco.com/site/us/en/about/why-cisco/mclaren-racing.html",
   "path": "site/us/en/about/why-cisco/mclaren-racing",
-  "timestamp": "2026-04-15T19:01:23.727Z",
+  "timestamp": "2026-04-15T19:43:51.563Z",
   "title": "Cisco powers the McLaren F1 Team - Cisco",
   "template": "case-study",
-  "blocks": []
+  "blocks": [
+    "columns"
+  ]
 }
