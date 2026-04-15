@@ -1,0 +1,18 @@
+{
+  "status": "success",
+  "url": "https://www.cisco.com/",
+  "path": "index",
+  "timestamp": "2026-04-15T18:42:49.869Z",
+  "title": "AI Infrastructure, Secure Networking, and Software Solutions - Cisco",
+  "template": "homepage",
+  "blocks": [
+    "hero",
+    "logo-bar",
+    "tabs",
+    "accordion",
+    "cards",
+    "cards",
+    "cards-news",
+    "stats"
+  ]
+}
