@@ -1,0 +1,12 @@
+{
+  "status": "success",
+  "url": "https://www.cisco.com/site/us/en/products/networking/index.html",
+  "path": "site/us/en/products/networking/index",
+  "timestamp": "2026-04-15T18:59:31.334Z",
+  "title": "Cisco Networking Products and Solutions - Cisco",
+  "template": "product-category",
+  "blocks": [
+    "hero",
+    "columns"
+  ]
+}
