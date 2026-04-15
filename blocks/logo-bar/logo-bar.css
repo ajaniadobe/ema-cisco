@@ -1,0 +1,33 @@
+.logo-bar {
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.logo-bar .logo-bar-statement {
+  font-size: var(--body-font-size-l);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xl);
+}
+
+.logo-bar .logo-bar-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.logo-bar .logo-bar-item {
+  flex: 0 0 auto;
+}
+
+.logo-bar .logo-bar-item img {
+  height: 32px;
+  width: auto;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.logo-bar .logo-bar-item img:hover {
+  opacity: 1;
+}

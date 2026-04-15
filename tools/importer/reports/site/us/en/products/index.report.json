@@ -1,0 +1,14 @@
+{
+  "status": "success",
+  "url": "https://www.cisco.com/site/us/en/products/index.html",
+  "path": "site/us/en/products/index",
+  "timestamp": "2026-04-15T18:58:13.284Z",
+  "title": "Cisco Products: Networking, Security, Data Center - Cisco",
+  "template": "category-hub",
+  "blocks": [
+    "hero",
+    "accordion",
+    "columns",
+    "columns"
+  ]
+}

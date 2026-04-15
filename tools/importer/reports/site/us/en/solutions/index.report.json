@@ -1,0 +1,13 @@
+{
+  "status": "success",
+  "url": "https://www.cisco.com/site/us/en/solutions/index.html",
+  "path": "site/us/en/solutions/index",
+  "timestamp": "2026-04-15T18:58:19.200Z",
+  "title": "Cisco Solutions for Technology, Industry, and Business Needs - Cisco",
+  "template": "category-hub",
+  "blocks": [
+    "hero",
+    "accordion",
+    "columns"
+  ]
+}

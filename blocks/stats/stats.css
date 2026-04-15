@@ -1,0 +1,20 @@
+.stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-xl);
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.stats .stats-value {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--color-brand);
+}
+
+.stats .stats-label {
+  font-size: var(--body-font-size-s);
+  margin-top: var(--spacing-s);
+  opacity: 0.8;
+}
