@@ -11,8 +11,9 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--header-height);
-  background-color: var(--color-cisco-navy);
-  color: var(--color-light);
+  background-color: var(--color-light);
+  color: var(--color-cisco-navy);
+  border-bottom: 1px solid var(--color-gray-200);
 
   ul {
     margin: 0;

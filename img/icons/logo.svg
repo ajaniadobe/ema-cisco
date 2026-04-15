@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="108" height="57" viewBox="0 0 108 57" role="img">
+<svg id="logo" xmlns="http://www.w3.org/2000/svg" width="108" height="57" viewBox="0 0 108 57" role="img">
   <title>Cisco</title>
   <defs>
     <path d="M0 22.769a2.348 2.348 0 0 0 3.935 1.545c.434-.403.7-.955.744-1.545v-5.2a2.34 2.34 0 0 0-4.679 0v5.2" id="bar_short" class="bar"/>

@@ -1,12 +1,16 @@
 .logo-bar {
   text-align: center;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xxl) 0;
+  max-width: var(--grid-container-width);
+  margin: 0 auto;
 }
 
 .logo-bar .logo-bar-statement {
-  font-size: var(--body-font-size-l);
-  font-weight: 500;
-  margin-bottom: var(--spacing-xl);
+  font-size: var(--body-font-size-m);
+  font-weight: 400;
+  color: var(--color-gray-400);
+  margin-bottom: var(--spacing-xxl);
+  letter-spacing: 0.02em;
 }
 
 .logo-bar .logo-bar-grid {
@@ -14,20 +18,35 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-xl) var(--spacing-xxl);
 }
 
 .logo-bar .logo-bar-item {
   flex: 0 0 auto;
 }
 
+.logo-bar .logo-bar-item a {
+  display: block;
+}
+
 .logo-bar .logo-bar-item img {
-  height: 32px;
+  height: 28px;
   width: auto;
-  opacity: 0.7;
-  transition: opacity 0.2s;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  filter: brightness(0) invert(1);
 }
 
 .logo-bar .logo-bar-item img:hover {
-  opacity: 1;
+  opacity: 0.9;
+}
+
+@media (width < 600px) {
+  .logo-bar .logo-bar-grid {
+    gap: var(--spacing-l) var(--spacing-xl);
+  }
+
+  .logo-bar .logo-bar-item img {
+    height: 22px;
+  }
 }
