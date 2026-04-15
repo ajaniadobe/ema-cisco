@@ -349,14 +349,41 @@ a {
   }
 }
 
+/* Decorative background images — convert inline imgs with empty alt to section backgrounds */
+.section.dark > .default-content > p:first-child:has(img[alt=""]) {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+  }
+}
+
+.section.dark:has(> .default-content > p:first-child > img[alt=""]) {
+  position: relative;
+  overflow: hidden;
+
+  > .default-content,
+  > .block-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 /* quick links tile grid — default-content following a block-content (hero) */
 .block-content + .default-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  gap: 16px;
   max-width: var(--grid-container-width);
-  margin: var(--spacing-xxl) auto;
-  padding: 0;
+  margin: 0 auto;
+  padding: 60px 0 80px;
 
   p {
     margin: 0;
@@ -366,7 +393,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 20px;
+    padding: 22px 24px;
     border: 1px solid var(--color-gray-600);
     border-radius: 8px;
     color: var(--color-light) !important;
@@ -381,13 +408,13 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    border: 1px solid var(--color-gray-600);
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--color-gray-500);
     border-radius: 50%;
-    font-size: 16px;
+    font-size: 18px;
     flex-shrink: 0;
-    margin-left: 12px;
+    margin-left: 16px;
     transition: border-color 0.2s, background-color 0.2s;
   }
 
@@ -406,11 +433,11 @@ a {
 @media (width < 600px) {
   .block-content + .default-content {
     grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-    margin: var(--spacing-l) auto;
+    gap: 10px;
+    padding: 32px 16px 48px;
 
-    a {
-      padding: 12px 16px;
+    a:any-link {
+      padding: 16px;
       font-size: var(--body-font-size-s);
     }
 

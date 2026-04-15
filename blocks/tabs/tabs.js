@@ -3,14 +3,41 @@ function toClassName(name) {
 }
 
 export default async function decorate(block) {
+  const rows = [...block.children];
+
+  // Check if first row is a background/title row (image with empty alt + heading)
+  const firstRow = rows[0];
+  const firstImg = firstRow?.querySelector('img[alt=""]');
+  const firstHeading = firstRow?.querySelector('h2');
+
+  if (firstImg && firstHeading) {
+    // Extract background image and title from first row
+    const bgWrapper = document.createElement('div');
+    bgWrapper.className = 'tabs-background';
+    bgWrapper.append(firstImg);
+    block.prepend(bgWrapper);
+
+    const titleWrapper = document.createElement('div');
+    titleWrapper.className = 'tabs-title';
+    titleWrapper.append(firstHeading);
+    bgWrapper.after(titleWrapper);
+
+    firstRow.remove();
+  }
+
   const tablist = document.createElement('div');
   tablist.className = 'tabs-list';
   tablist.setAttribute('role', 'tablist');
 
-  const tabs = [...block.children].map((child) => child.firstElementChild);
-  tabs.forEach((tab, i) => {
+  const tabs = [...block.children].filter(
+    (c) => !c.classList.contains('tabs-background') && !c.classList.contains('tabs-title'),
+  );
+
+  tabs.forEach((child, i) => {
+    const tab = child.firstElementChild;
+    if (!tab) return;
     const id = toClassName(tab.textContent);
-    const tabpanel = block.children[i];
+    const tabpanel = child;
     tabpanel.className = 'tabs-panel';
     tabpanel.id = `tabpanel-${id}`;
     tabpanel.setAttribute('aria-hidden', !!i);
@@ -39,5 +66,11 @@ export default async function decorate(block) {
     tab.remove();
   });
 
-  block.prepend(tablist);
+  // Insert tablist after title (or at top if no title)
+  const titleEl = block.querySelector('.tabs-title');
+  if (titleEl) {
+    titleEl.after(tablist);
+  } else {
+    block.prepend(tablist);
+  }
 }
