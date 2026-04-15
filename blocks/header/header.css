@@ -11,9 +11,9 @@ header {
   z-index: 1000;
   overflow: hidden;
   max-height: var(--header-height);
-  background-color: var(--color-light);
-  color: var(--color-cisco-navy);
-  border-bottom: 1px solid var(--color-gray-200);
+  background-color: var(--color-cisco-navy);
+  color: var(--color-light);
+  border-bottom: 1px solid rgb(255 255 255 / 10%);
 
   ul {
     margin: 0;
@@ -28,6 +28,21 @@ header {
 
   a {
     text-decoration: none;
+    color: var(--color-light);
+  }
+
+  /* Hide nested dropdown lists by default */
+  .main-nav-item > ul,
+  .main-nav-item > .menu,
+  .main-nav-item > .mega-menu,
+  nav ul ul {
+    display: none;
+  }
+
+  .main-nav-item.is-open > ul,
+  .main-nav-item.is-open > .menu,
+  .main-nav-item.is-open > .mega-menu {
+    display: block;
   }
 
   .btn {
@@ -138,7 +153,7 @@ header {
         font-weight: 700;
         text-decoration: none;
         margin: 0;
-        color: var(--color-brand);
+        color: var(--color-cisco-blue-light);
 
         img {
           height: var(--logo-height);
@@ -151,9 +166,10 @@ header {
 
         .brand-text {
           display: block;
-          width: 0;
-          height: 0;
-          overflow: hidden;
+          font-size: var(--heading-font-size-l);
+          font-weight: 700;
+          letter-spacing: 0.02em;
+          color: var(--color-cisco-blue-light);
         }
       }
     }
@@ -176,7 +192,7 @@ header {
     }
 
     > .block-content {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid rgb(255 255 255 / 10%);
     }
 
     .action-wrapper {
@@ -203,7 +219,7 @@ header {
     }
 
     .main-nav-item {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid rgb(255 255 255 / 10%);
 
       > * {
         max-width: var(--grid-container-width);
@@ -223,7 +239,7 @@ header {
 
     .is-open {
       .main-nav-link {
-        border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+        border-bottom: 1px solid rgb(255 255 255 / 10%);
       }
 
       .menu,
@@ -244,7 +260,7 @@ header {
     }
 
     .brand-section {
-      border-bottom: 1px solid light-dark(var(--color-gray-200), var(--color-gray-600));
+      border-bottom: 1px solid rgb(255 255 255 / 10%);
     }
   }
 }
