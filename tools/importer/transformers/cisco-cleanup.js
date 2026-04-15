@@ -51,9 +51,8 @@ export default function transform(hookName, element, payload) {
       '[class*="skip-link"]',
     ]);
 
-    // Quick links section (out of scope per migration decisions)
+    // Hidden header button container
     WebImporter.DOMUtils.remove(element, [
-      'section.quick-links-section',
       '#container-header-button',
     ]);
 

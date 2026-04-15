@@ -257,7 +257,6 @@ var CustomImportScript = (() => {
         '[class*="skip-link"]'
       ]);
       WebImporter.DOMUtils.remove(element, [
-        "section.quick-links-section",
         "#container-header-button"
       ]);
       WebImporter.DOMUtils.remove(element, [
